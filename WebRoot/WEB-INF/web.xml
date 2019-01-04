@@ -13,6 +13,16 @@
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>webSession.LoginServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>ImgCode</servlet-name>
+    <servlet-class>webImg.ImgCode</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ImgLoginServlet</servlet-name>
+    <servlet-class>webImg.ImgLoginServlet</servlet-class>
+  </servlet>
+
+
 
 
 
@@ -28,5 +38,25 @@
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/LoginServlet.html</url-pattern>
   </servlet-mapping>
-
+  <servlet-mapping>
+    <servlet-name>ImgCode</servlet-name>
+    <url-pattern>/ImgCode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ImgLoginServlet</servlet-name>
+    <url-pattern>/ImgLoginServlet.html</url-pattern>
+  </servlet-mapping>
+	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/erro/p404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/erro/p500.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.RuntimeException</exception-type>
+		<location>/erro/erro.jsp</location>
+	</error-page>
 </web-app>
