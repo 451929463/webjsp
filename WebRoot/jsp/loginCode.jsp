@@ -28,7 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			//改变属性
   			var img = document.getElementById("img1");
   			var src = img.getAttribute("src");
-  			img.setAttribute("src", "/webjsp/ImgCode");
+  			//img.setAttribute("src", "/webjsp/ImgCode");
 			img.setAttribute("src", "/webjsp/ImgCode?"+Math.random());
 			alert(img.getAttribute("src"));
 		}
